@@ -4,12 +4,36 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'folder/Inbox',
+    redirectTo: 'dashboard',
     pathMatch: 'full'
   },
   {
-    path: 'folder/:id',
-    loadChildren: () => import('./folder/folder.module').then( m => m.FolderPageModule)
+    path: 'dashboard',
+    loadChildren: () => import('./dashboard/dashboard/dashboard.module').then( m => m.DashboardPageModule)
+  },
+  {
+    path: 'books-list',
+    loadChildren: () => import('./books/books-list/books-list.module').then( m => m.BooksListPageModule)
+  },
+  {
+    path: 'books-register',
+    loadChildren: () => import('./books/books-register/books-register.module').then( m => m.BooksRegisterPageModule)
+  },
+  {
+    path: 'authors-register',
+    loadChildren: () => import('./authors/authors-register/authors-register.module').then( m => m.AuthorsRegisterPageModule)
+  },
+  {
+    path: 'authors-list',
+    loadChildren: () => import('./authors/authors-list/authors-list.module').then( m => m.AuthorsListPageModule)
+  },
+  {
+    path: 'publishers-list',
+    loadChildren: () => import('./publishers/publishers-list/publishers-list.module').then( m => m.PublishersListPageModule)
+  },
+  {
+    path: 'publishers-register',
+    loadChildren: () => import('./publishers/publishers-register/publishers-register.module').then( m => m.PublishersRegisterPageModule)
   }
 ];
 
