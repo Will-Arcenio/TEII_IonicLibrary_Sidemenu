@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "Library_SideMenu",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}
