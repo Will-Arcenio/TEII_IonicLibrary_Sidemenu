@@ -1,9 +1,72 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="tertiary">
+
+    <!-- Hamburguer Menu -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
     <ion-title>Livros</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Livros Disponíveis</ion-card-title>
+    </ion-card-header>
+  </ion-card>
+
+  <div class="loading-spinner" *ngIf="loading" else #loadings>
+    <ion-spinner color="tertiary"></ion-spinner>
+  </div>
+
+  <div #loadings>
+    <ion-card *ngFor="let book of books">
+      <ion-card-header>
+        <ion-card-title>{{ book.nome }}</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <ion-list lines="none">
+
+          <ion-item>
+            <ion-avatar slot="start">
+              <img [src]="book.imagem" />
+            </ion-avatar>
+            <ion-label>
+              <h3>Autor: {{book.autor}}</h3>
+              <h3>Gênero: <strong>{{book.genero | genero}}</strong></h3>
+              <h3>
+                Preço:
+                <ion-text color="success">
+                  <strong> {{book.preco | currency : 'R$ '}} </strong>
+                </ion-text>
+              </h3>
+              <small>
+                Lançamento:
+                <ion-text color="medium">
+                  {{book.publicacao | date: 'dd/MM/yyyy'}}
+                </ion-text>
+              </small>
+            </ion-label>
+          </ion-item>
+
+          <ion-button color="secondary" class="list-button" (click)="showOptions(book)">Opções
+            <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+          </ion-button>
+
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+  </div>
+
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button color="tertiary" [routerLink]="['/books-register']">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
