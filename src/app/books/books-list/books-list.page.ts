@@ -1,18 +1,125 @@
+/* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
-import { Books } from '../books';
+import { Router } from '@angular/router';
+import { ViewWillEnter, ActionSheetController, AlertController } from '@ionic/angular';
+import { finalize } from 'rxjs/operators';
+import { environment } from 'src/environments/environment';
+
+import { MessageService } from '../../services/message.service';
+import { Book } from '../books';
+import { BooksApiService } from '../books-api.service';
 
 @Component({
   selector: 'app-books-list',
   templateUrl: './books-list.page.html',
   styleUrls: ['./books-list.page.scss'],
 })
-export class BooksListPage implements OnInit {
+export class BooksListPage implements OnInit, ViewWillEnter {
 
-  book: Books;
+  books: Book[];
+  loading = false;
 
-  constructor() { }
+  constructor(
+    private booksApiService: BooksApiService,
+    private messageService: MessageService,
+    private actionSheetController: ActionSheetController,
+    private alertController: AlertController,
+    private router: Router
+  ) { }
 
   ngOnInit() {
+    this.listBooks();
+  }
+  ionViewWillEnter(): void {
+    this.listBooks();
+  }
+
+  // List Books
+  listBooks() {
+    this.loading = true;
+    this.booksApiService.getBooks().pipe(finalize(() => this.loading = false)).subscribe(
+      (books) => {
+        this.books = books;
+      },
+      () => {
+        this.messageService.showErrorMessage(`Erro ao carregar os livros disponíveis.`, () => this.listBooks());
+      }
+    );
+  }
+
+  // Book Remove
+  removeBook(book: Book) {
+    this.loading = true;
+    this.booksApiService.removeBook(book.id).subscribe(
+      () => {
+        this.messageService.showSuccessMessage(`O livro '[${ book.referencia }] - ${ book.nome }' foi excluído com sucesso.`);
+        this.listBooks();
+      },
+      () => {
+        this.messageService.showErrorMessage(`Erro ao excluir o livro '[${ book.referencia }] - ${ book.nome }'.`, () => this.removeBook(book));
+        this.loading = false;
+      }
+    );
+  }
+
+  // Confirm Book Remove
+  confirmRemoveBook(book: Book) {
+    this.alertController.create({
+      header: 'Exclusão',
+      message: `Deseja excluir o livro '${book.nome}'?`,
+      buttons: [
+        {
+          text: 'Sim',
+          handler: () => this.removeBook(book)
+        },
+        {
+          text: 'Não'
+        }
+      ]
+    }).then((alert) => alert.present());
+  }
+
+  // Botão para mostrar as opções
+  async showOptions(book: Book) {
+    const actionSheet = await this.actionSheetController.create({
+      header: 'Opções',
+      cssClass: 'menu-options',
+      buttons: [{
+        text: 'Excluir',
+        role: 'destructive',
+        icon: 'trash',
+        id: 'delete-button',
+        data: {
+          type: 'delete'
+        },
+        handler: () => {
+          this.confirmRemoveBook(book);
+        }
+      }, {
+        text: 'Editar',
+        icon: 'pencil',
+        data: 10,
+        handler: () => {
+          this.router.navigate([`/books-register/`, book.id]);
+          this.loading = true;
+        }
+      }, {
+        text: 'Favoritar',
+        icon: 'heart',
+        handler: () => {
+          console.log('Favorite clicked');
+        }
+      }, {
+        text: 'Cancelar',
+        icon: 'close',
+        role: 'cancel',
+        handler: () => {
+          console.log('Cancel clicked');
+        }
+      }]
+    });
+
+    await actionSheet.present();
   }
 
 }

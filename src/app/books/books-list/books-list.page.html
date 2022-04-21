@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
 
     <!-- Hamburguer Menu -->
     <ion-buttons slot="start">
@@ -18,14 +18,18 @@
     </ion-card-header>
   </ion-card>
 
-  <div class="loading-spinner" *ngIf="loading" else #loadings>
-    <ion-spinner color="tertiary"></ion-spinner>
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
   </div>
 
-  <div #loadings>
+  <div *ngIf="!loading">
     <ion-card *ngFor="let book of books">
       <ion-card-header>
-        <ion-card-title>{{ book.nome }}</ion-card-title>
+        <ion-card-title>
+          <strong>{{ book.nome }}</strong>
+          <ion-icon name="ellipsis-vertical-outline" (click)="showOptions(book)"></ion-icon>
+        </ion-card-title>
+        <ion-card-subtitle><small>Ref. {{ book.referencia }}</small></ion-card-subtitle>
       </ion-card-header>
 
       <ion-card-content>
@@ -53,9 +57,9 @@
             </ion-label>
           </ion-item>
 
-          <ion-button color="secondary" class="list-button" (click)="showOptions(book)">Opções
+          <!-- <ion-button color="secondary" class="list-button" (click)="showOptions(book)">Opções
             <ion-icon name="ellipsis-vertical-outline"></ion-icon>
-          </ion-button>
+          </ion-button> -->
 
         </ion-list>
       </ion-card-content>
@@ -66,7 +70,7 @@
 </ion-content>
 
 <ion-fab vertical="bottom" horizontal="end">
-  <ion-fab-button color="tertiary" [routerLink]="['/books-register']">
+  <ion-fab-button color="primary" [routerLink]="['/books-register']">
     <ion-icon name="add-outline"></ion-icon>
   </ion-fab-button>
 </ion-fab>

@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { BooksListPageRoutingModule } from './books-list-routing.module';
 
 import { BooksListPage } from './books-list.page';
+import { GeneroPipe } from '../genero.pipe';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { BooksListPage } from './books-list.page';
     IonicModule,
     BooksListPageRoutingModule
   ],
-  declarations: [BooksListPage]
+  declarations: [BooksListPage, GeneroPipe]
 })
 export class BooksListPageModule {}
