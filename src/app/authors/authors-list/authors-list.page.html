@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
 
     <!-- Hamburguer Menu -->
     <ion-buttons slot="start">
@@ -11,5 +11,44 @@
 </ion-header>
 
 <ion-content>
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <!-- Mostrar caso a lista de Autores esteja vazia -->
+  <div *ngIf="!authorsExists">
+    <ion-list>
+      <ion-list-header>Não há autores para listar.</ion-list-header>
+    </ion-list>
+  </div>
+
+  <div *ngIf="!loading && authorsExists">
+
+    <ion-list>
+
+      <ion-card *ngFor="let author of authors">
+        <ion-item  color="light">
+          <ion-thumbnail slot="start">
+            <img [src]="author.retrato">
+          </ion-thumbnail>
+          <ion-label>
+            <h2>{{ author.nome }} {{ author.sobrenome }}</h2>
+            <h3 style="color: rgb(224, 231, 124);">{{ author.nacionalidade }}</h3>
+            <p style="opacity: 0.5;">{{ author.redes }}</p>
+          </ion-label>
+          <ion-icon class="author-list-icons" name="pencil" [routerLink]="['/authors-register', author.id]"></ion-icon>
+          <ion-icon class="author-list-icons" name="trash" (click)="confirmRemoveAuthor(author)"></ion-icon>
+        </ion-item>
+      </ion-card>
+
+    </ion-list>
+
+  </div>
 
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button color="primary" [routerLink]="['/authors-register']">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -1,5 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
 
     <!-- Hamburguer Menu -->
     <ion-buttons slot="start">
@@ -10,6 +10,63 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [formGroup]="form" >
+
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <div *ngIf="!loading">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informações do Autor</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Sobrenome</ion-label>
+          <ion-input type="text" formControlName="sobrenome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Nacionalidade</ion-label>
+          <ion-select formControlName="nacionalidade">
+            <ion-select-option value="Brasileiro(a)">Brasileiro(a)</ion-select-option>
+            <ion-select-option value="Norte Americano(a)">Norte Americano(a)</ion-select-option>
+            <ion-select-option value="Britânico(a)">Britânico(a)</ion-select-option>
+            <ion-select-option value="Coreano(a)">Coreano(a)</ion-select-option>
+            <ion-select-option value="Japonês(a)">Japonês(a)</ion-select-option>
+            <ion-select-option value="Israelense">Israelense</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Redes</ion-label>
+          <ion-input type="text" formControlName="redes"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Data Nascimento</ion-label>
+          <ion-datetime displayFormat="DD/MM/YYYY" cancelText="Cancelar" doneText="Confirmar" formControlName="nascimento"></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Retrato (URL)</ion-label>
+          <ion-input type="url" formControlName="retrato"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="saveAuthor()" color="primary" [disabled]="!form.valid">
+    <ion-icon name="checkmark"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
