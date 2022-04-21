@@ -5,11 +5,11 @@
       "referencia": "000001",
       "nome": "A Garota do Lago",
       "sinopse": "Summit Lake, uma pequena cidade entre montanhas, é esse tipo de lugar, bucólico e com encantadoras casas dispostas à beira de um longo trecho de água intocada.Duas semanas atrás, a estudante de direito Becca Eckersley foi brutalmente assassinada em uma dessas casas. Filha de um poderoso advogado, Becca estava no auge de sua vida. Atraída instintivamente pela notícia, a repórter Kelsey Castle vai até a cidade para investigar o caso. ...E LOGO SE ESTABELECE UMA CONEXÃO ÍNTIMA QUANDO UM VIVO CAMINHA NAS MESMAS PEGADAS DOS MORTOS...E enquanto descobre sobre as amizades de Becca, sua vida amorosa e os segredos que ela guardava, a repórter fica cada vez mais convencida de que a verdade sobre o que aconteceu com Becca pode ser a chave para superar as marcas sombrias de seu próprio passado.",
-      "genero": "FICCAO_CIENTIFICA",
+      "genero": "Ficção Literária",
       "autor": "Charlie Donlea",
       "editora": "Faro Editorial",
       "publicacao": "2017-01-01",
-      "preco": 8.90,
+      "preco": 15.9,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/516VOgxwg2L._SX339_BO1,204,203,200_.jpg"
     },
     {
@@ -17,11 +17,11 @@
       "referencia": "000002",
       "nome": "O Morro dos Ventos Uivantes",
       "sinopse": "Único romance da escritora inglesa Emily Bronte, O morro dos ventos uivantes retrata uma trágica historia de amor e obsessão em que os personagens principais são a obstinada e geniosa Catherine Earnshaw e seu irmão adotivo, Heathcliff. Grosseiro, humilhado e rejeitado, ele guarda apenas rancor no coração, mas tem com Catherine um relaciona- mento marcado por amor e, ao mesmo tempo, ódio. Essa ligação perdura mesmo com o casamento de Catherine com Edgar Linton.",
-      "genero": "ROMANCE",
+      "genero": "Não Ficção",
       "autor": "Emily Brontë",
       "editora": "Principis",
       "publicacao": "2019-06-17",
-      "preco": 11.20,
+      "preco": 11.2,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/51HgwirtaDL._SX346_BO1,204,203,200_.jpg"
     },
     {
@@ -29,7 +29,7 @@
       "referencia": "000003",
       "nome": "O Agir Invisível de Deus",
       "sinopse": "Vivemos dias em que a fé cristã tem crescido e se espalhado grandemente. Mas temos que reconhecer que esse avanço tem acontecido a uma velocidade muito maior do que a capacidade de a igreja amadurecer. Com isso, a maneira de deus agir nem sempre corresponde às nossas expectativas. Mesmo imaturos, imaginamos que podemos entender a maneira como deus determina sua vontade. Tentamos encontrar respostas para tudo, como se nosso raciocínio limitado pudesse esquadrinhar a mente do senhor. Se algo acontece com alguém, sabemos por que; se deixa de acontecer, também temos a resposta. Ao escrever sobre o agir invisível de deus, o autor demonstra que as nossas explicações sobre a vida estão longe de serem completas. Lembra-nos ainda de que o nosso alvo deveria ser buscar em deus uma dimensão mais profunda de revelação da sua palavra. Precisamos confiar na soberania de deus e aceitar o fato de que nem sempre teremos todas as respostas, mas sempre poderemos caminhar na certeza de que ele tem o melhor para nós, quer compreendamos, quer não.",
-      "genero": "RELIGIOSO",
+      "genero": "Religioso",
       "autor": "Luciano Subirá",
       "editora": "Vida Livros",
       "publicacao": "2019-06-01",
@@ -41,12 +41,65 @@
       "referencia": "000004",
       "nome": "Bem-vindo, Espírito Santo: Como a presença do Espírito Santo atua em nossa vida",
       "sinopse": "ABRA AS PORTAS DO SEU CORAÇÃOEm seu primeiro livro, Bom dia, Espírito Santo, Benny Hinn apresentou o Espírito Santo a milhões de pessoas como um guia pessoal e amigo sempre presente. Mas ainda havia mais a dizer sobre a Terceira Pessoa da Trindade, o que o autor faz com propriedade em Bem-vindo, Espírito Santo, livro que a Renova traz de volta ao mercado em uma nova edição revisada.NESTE LIVRO, VOCÊ VAI DESCOBRIR:• Os nomes e títulos do Espírito Santo• A obra do Espírito na vida de Jesus Cristo• A comunhão transformadora com a Terceira Pessoa da Trindade• Como remover as barreiras para as bênçãosEm Bem-Vindo, Espírito Santo, a Terceira Pessoa da Trindade é apresentada como o grande transformador da vida, cheio de poder para mudar a história do mundo – e a sua também!'É preciso ter paixão pelo poder divino. Você precisa ter essa fome em seu coração, uma fome que o faça continuar procurando até experimentar, em sua própria vida, os milagres descritos pela Bíblia.' – Benny Hinn",
-      "genero": "RELIGIOSO",
+      "genero": "Religioso",
       "autor": "Benny Hinn",
       "editora": "Renova",
       "publicacao": "2014-09-08",
       "preco": 14.49,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/41Di8dib1+L._SX321_BO1,204,203,200_.jpg"
+    },
+    {
+      "id": 5,
+      "referencia": "000005",
+      "nome": "Código Limpo",
+      "sinopse": "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim. O renomado especialista em software, Robert C. Martin, apresenta um paradigma revolucionário com Código limpo: Habilidades Práticas do Agile Software.",
+      "genero": "Não Ficção",
+      "autor": "Robert C. Martin",
+      "editora": "Alta Books",
+      "publicacao": "2019-07-22T00:00:00-03:00",
+      "preco": 67,
+      "imagem": "https://images-na.ssl-images-amazon.com/images/I/71dH97FwGbL.jpg"
+    },
+    {
+      "id": 6,
+      "referencia": "000006",
+      "nome": "Engenharia de Software Moderna",
+      "sinopse": "Engenharia de Software Moderna é um livro-texto que cobre um amplo conjunto de princípios e práticas para desenvolvimento de software com produtividade e qualidade, incluindo: métodos ágeis, como Scrum, XP e Kanban; levantamento ágil de requisitos, incluindo histórias de usuários, MVPs e testes A/B; projeto de software, tratando de propriedades de projeto, princípios e padrões de projeto; arquitetura de software, incluindo padrões arquiteturais como MVC, microsserviços e publish/subscribe; testes de Software, com ênfase em testes de unidade, testabilidade, cobertura e Desenvolvimento Dirigido por Testes (TDD); refactoring, com exemplos reais de refactorings e code smells; e DevOps, incluindo controle de versões (usando git), integração e deployment contínuo. O livro destina-se a alunos de cursos de graduação em Ciência da Computação, Sistemas de Informação, Engenharia de Software e Engenharia de Computação, dentre outros. Pode ser usado também por profissionais que buscam atualização em Engenharia de Software.",
+      "genero": "Ficção Científica",
+      "autor": "Vários Autores",
+      "editora": "Independente",
+      "publicacao": "2022-01-01T00:00:00-03:00",
+      "preco": 65.9,
+      "imagem": "https://m.media-amazon.com/images/P/B086K5QJ9V.01._SCLZZZZZZZ_SX500_.jpg"
+    }
+  ],
+  "authors": [
+    {
+      "id": 1,
+      "nome": "Luciano",
+      "sobrenome": "Subirá",
+      "nacionalidade": "Brasileiro(a)",
+      "redes": "@lucianosubira",
+      "nascimento": "1972-12-20",
+      "retrato": "https://hagnos.com.br/img/m/48.jpg"
+    },
+    {
+      "id": 2,
+      "nome": "Benny",
+      "sobrenome": "Hinn",
+      "nacionalidade": "Israelense",
+      "redes": "@benny_hinn",
+      "nascimento": "1952-12-03T00:00:00-02:00",
+      "retrato": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Benny_Hinn_2019_%28361354094%29.jpg"
+    },
+    {
+      "id": 3,
+      "nome": "Emily ",
+      "sobrenome": "Brontë",
+      "nacionalidade": "Britânico(a)",
+      "redes": "[N/A]",
+      "nascimento": "1922-07-30T00:00:00-03:00",
+      "retrato": "https://img.skoob.com.br/fNtwj77q4POAjXYxHzKNyOr-kqQ=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/autores/62/103311387204617G.jpg"
     }
   ]
 }
