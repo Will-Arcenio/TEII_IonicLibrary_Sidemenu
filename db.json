@@ -101,5 +101,18 @@
       "nascimento": "1922-07-30T00:00:00-03:00",
       "retrato": "https://img.skoob.com.br/fNtwj77q4POAjXYxHzKNyOr-kqQ=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/autores/62/103311387204617G.jpg"
     }
+  ],
+  "publishers": [
+    {
+      "id": 1,
+      "nome": "Faro Editorial",
+      "endereco": "Av. Andrômeda, 885 - Sala 310",
+      "telefone": "(48) 99908-0521",
+      "foto": "https://www.ideiasdecor.com/wp-content/uploads/2019/04/frente-de-casas-60.jpg",
+      "site": "faroeditorial.com.br",
+      "email": "contato@faroeditorial.com.br",
+      "localizacao": "https://goo.gl/maps/C3uvgcD7te9VFEMv6",
+      "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14637.275767686462!2d-46.8648789!3d-23.4850189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f5de0d3b9cce1f4!2sFaro%20Editorial!5e0!3m2!1spt-BR!2sbr!4v1651019668762!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    }
   ]
 }
