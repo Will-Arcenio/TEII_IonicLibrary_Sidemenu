@@ -1,15 +1,75 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
+  <ion-toolbar color="primary">
 
     <!-- Hamburguer Menu -->
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
 
-    <ion-title>publishers-register</ion-title>
+    <ion-title>Cadastrar Editora</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content [formGroup]="form" >
+
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <div *ngIf="!loading">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Informações da Editora</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-item>
+          <ion-label position="floating">Nome</ion-label>
+          <ion-input type="text" formControlName="nome"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Endereço</ion-label>
+          <ion-input type="text" formControlName="endereco"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Telefone</ion-label>
+          <ion-input type="text" formControlName="telefone"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Foto (URL)</ion-label>
+          <ion-input type="text" formControlName="foto"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Site</ion-label>
+          <ion-input type="text" formControlName="site"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">E-mail</ion-label>
+          <ion-input type="text" formControlName="email"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Localização (URL Google Maps)</ion-label>
+          <ion-input type="url" formControlName="localizacao"></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">iFrame (HTML)</ion-label>
+          <ion-input type="url" formControlName="iframeMap"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+  </div>
 
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button (click)="savePublisher()" color="primary" [disabled]="!form.valid">
+    <ion-icon name="checkmark"></ion-icon>
+  </ion-fab-button>
+</ion-fab>

@@ -7,6 +7,10 @@ const routes: Routes = [
   {
     path: '',
     component: PublishersRegisterPage
+  },
+  {
+    path: ':id',
+    component: PublishersRegisterPage
   }
 ];
 
