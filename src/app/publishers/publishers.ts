@@ -3,5 +3,9 @@ export interface Publishers {
   nome: string;
   endereco: string;
   telefone: string;
-  dataCriacao: Date;
+  foto: string;
+  site: string;
+  email: string;
+  localizacao: string;
+  iframeMap: string;
 }
