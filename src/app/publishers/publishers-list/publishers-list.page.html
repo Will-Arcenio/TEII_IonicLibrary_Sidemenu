@@ -1,6 +1,5 @@
 <ion-header>
-  <ion-toolbar color="tertiary">
-
+  <ion-toolbar color="primary">
     <!-- Hamburguer Menu -->
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
@@ -11,5 +10,81 @@
 </ion-header>
 
 <ion-content>
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <!-- Mostrar caso a lista de Autores esteja vazia -->
+  <div *ngIf="!publishersExists">
+    <ion-list>
+      <ion-list-header>Não há editoras para listar.</ion-list-header>
+    </ion-list>
+  </div>
+
+  <div *ngIf="!loading && publishersExists">
+
+    <ion-accordion-group *ngFor="let publisher of publishers">
+      <ion-card>
+        <ion-accordion value="publishers">
+
+          <ion-item slot="header">
+            <ion-card-title class="publisher-title">
+              {{ publisher.nome }}
+            </ion-card-title>
+            <ion-icon name="pencil" slot="end" [routerLink]="['/publishers-register', publisher.id]"></ion-icon>
+            <ion-icon name="trash" slot="end" (click)="confirmRemovePublisher(publisher)"></ion-icon>
+          </ion-item>
+
+          <ion-list slot="content">
+            <ion-card class="list-publisher-item">
+
+              <ion-card color="secondary">
+                <img [src]="publisher.foto" />
+                <ion-card-content>
+
+                  <ion-text>
+                    <ion-icon name="call"></ion-icon>
+                    <p>{{ publisher.telefone }}</p>
+                  </ion-text>
+
+                  <br />
+
+                  <ion-text>
+                    <ion-icon name="browsers-outline"></ion-icon>
+                    <a [href]="publisher.site" target="_blank"><p>{{ publisher.site }}</p></a>
+                  </ion-text>
+
+                  <br />
+
+                  <ion-text>
+                    <ion-icon name="mail"></ion-icon>
+                    <a href="mailto:{{ publisher.email }}" target="_blank"><p>{{ publisher.email }}</p></a>
+                  </ion-text>
+
+                  <br>
+
+                  <ion-text>
+                    <ion-icon name="location-outline"></ion-icon>
+                    <a href="{{ publisher.localizacao }}" target="_blank">{{ publisher.endereco }}</a>
+                  </ion-text>
+
+                  <div [innerHtml]="transform(publisher.iframeMap)" class="map-publisher"></div>
+                </ion-card-content>
+              </ion-card>
+
+            </ion-card>
+          </ion-list>
+
+        </ion-accordion>
+      </ion-card>
+    </ion-accordion-group>
+
+    </div>
 
 </ion-content>
+
+<ion-fab vertical="bottom" horizontal="end">
+  <ion-fab-button color="primary" [routerLink]="['/publishers-register']">
+    <ion-icon name="add-outline"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
