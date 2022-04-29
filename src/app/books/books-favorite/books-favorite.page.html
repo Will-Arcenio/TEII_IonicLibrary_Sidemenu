@@ -1,0 +1,105 @@
+<ion-header>
+  <ion-toolbar color="primary">
+
+    <!-- Hamburguer Menu -->
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+
+    <ion-title>Livros Favoritos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="loading-spinner" *ngIf="loading">
+    <ion-spinner color="primary"></ion-spinner>
+  </div>
+
+  <!-- Mostrar caso os Favoritos esteja vazio -->
+  <!-- <div>
+    <ion-list>
+      <ion-list-header>Não há livros favoritos para listar.</ion-list-header>
+    </ion-list>
+  </div> -->
+
+  <div *ngIf="!loading">
+
+    <ion-accordion-group *ngFor="let book of books">
+      <ion-card>
+        <ion-accordion value="books">
+
+          <ion-item slot="header">
+            <ion-card-title class="book-title">
+              {{ book.nome }}
+            </ion-card-title>
+            <ion-icon name="trash" slot="end" (click)="removeFavBook(book)"></ion-icon>
+          </ion-item>
+
+          <ion-list slot="content">
+            <ion-card class="list-book-item">
+
+              <img [src]="book.imagem" />
+              <ion-card-content>
+
+                <ion-item lines="none">
+                  <ion-text color="secondary"><h1><strong>{{ book.preco | currency }}</strong></h1></ion-text>
+                </ion-item>
+
+                <ion-accordion-group>
+                  <ion-accordion value="show-sinopse" class="show-sinopse">
+
+                    <ion-item slot="header">
+                      <ion-card-title><small>Sinopse</small></ion-card-title>
+                    </ion-item>
+
+                    <ion-list slot="content">
+
+                      <ion-item lines="none">
+                        <ion-text>{{ book.sinopse }}</ion-text>
+                      </ion-item>
+
+                    </ion-list>
+
+                  </ion-accordion>
+                </ion-accordion-group>
+
+                <ion-accordion-group>
+                  <ion-accordion value="show-more" class="show-more">
+
+                    <ion-item slot="header">
+                      <ion-card-title color="success"><small>mais informações</small></ion-card-title>
+                    </ion-item>
+
+                    <ion-list slot="content">
+                      <ion-item>
+                        <ion-text><strong>Autor: </strong>{{ book.autor }}</ion-text>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-text><strong>Gênero: </strong>{{ book.genero }}</ion-text>
+                      </ion-item>
+
+                      <ion-item>
+                        <ion-text><strong>Editora: </strong>{{ book.editora }}</ion-text>
+                      </ion-item>
+
+                      <ion-item lines="none">
+                        <ion-text><strong>Publicação: </strong>{{ book.publicacao | date: 'dd/MM/yyyy' }}</ion-text>
+                      </ion-item>
+                    </ion-list>
+
+                  </ion-accordion>
+                </ion-accordion-group>
+
+              </ion-card-content>
+
+            </ion-card>
+          </ion-list>
+
+        </ion-accordion>
+      </ion-card>
+    </ion-accordion-group>
+
+    </div>
+
+</ion-content>

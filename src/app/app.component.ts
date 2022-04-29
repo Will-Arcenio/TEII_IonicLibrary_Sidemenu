@@ -9,7 +9,8 @@ export class AppComponent {
     { title: 'Dashboard', url: '/dashboard', icon: 'home' },
     { title: 'Livros', url: '/books-list', icon: 'library' },
     { title: 'Autores', url: '/authors-list', icon: 'person' },
-    { title: 'Editoras', url: '/publishers-list', icon: 'journal' }
+    { title: 'Editoras', url: '/publishers-list', icon: 'journal' },
+    { title: 'Favoritos', url: '/books-favorite', icon: 'star' }
   ];
   // public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
   constructor() {}
