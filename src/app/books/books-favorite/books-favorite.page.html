@@ -32,11 +32,15 @@
             <ion-card-title class="book-title">
               {{ book.nome }}
             </ion-card-title>
-            <ion-icon name="trash" slot="end" (click)="removeFavBook(book)"></ion-icon>
           </ion-item>
 
           <ion-list slot="content">
             <ion-card class="list-book-item">
+
+              <ion-item>
+                <small>Ref. <ion-text color="medium">{{ book.referencia }}</ion-text></small>
+                <ion-icon name="trash" slot="end" (click)="confirmRemoveFavBook(book)"></ion-icon>
+              </ion-item>
 
               <img [src]="book.imagem" />
               <ion-card-content>

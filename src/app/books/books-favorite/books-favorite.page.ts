@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from '../books';
 import { BooksFavoriteService } from '../books-favorite.service';
-import { ViewWillEnter } from '@ionic/angular';
+import { ViewWillEnter, AlertController } from '@ionic/angular';
 
 @Component({
   selector: 'app-books-favorite',
@@ -13,7 +13,8 @@ export class BooksFavoritePage implements OnInit, ViewWillEnter {
   books: Book[];
 
   constructor(
-    private booksFavorite: BooksFavoriteService
+    private booksFavorite: BooksFavoriteService,
+    private alertController: AlertController
   ) { }
 
   ngOnInit() {
@@ -32,6 +33,23 @@ export class BooksFavoritePage implements OnInit, ViewWillEnter {
         this.loading = false;
       }
     );
+  }
+
+  // Confirm Book Remove
+  confirmRemoveFavBook(book: Book) {
+    this.alertController.create({
+      header: 'Remover dos Favoritos',
+      message: `Deseja remover dos favoritos o livro '${book.nome}'?`,
+      buttons: [
+        {
+          text: 'Sim',
+          handler: () => this.removeFavBook(book)
+        },
+        {
+          text: 'Não'
+        }
+      ]
+    }).then((alert) => alert.present());
   }
 
   removeFavBook(book: Book) {
