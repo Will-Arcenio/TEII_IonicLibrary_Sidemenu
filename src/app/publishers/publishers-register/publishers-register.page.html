@@ -60,7 +60,7 @@
 
         <ion-item>
           <ion-label position="floating">iFrame (HTML)</ion-label>
-          <ion-input type="url" formControlName="iframeMap"></ion-input>
+          <ion-input type="url" formControlName="iframeMap" id="iframeMap" (keyup)="getIframeValue()"></ion-input>
         </ion-item>
       </ion-card-content>
     </ion-card>

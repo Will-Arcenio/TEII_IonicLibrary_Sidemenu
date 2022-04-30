@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+/* eslint-disable prefer-arrow/prefer-arrow-functions */
+/* eslint-disable prefer-const */
+import { Component, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router, ActivatedRoute } from '@angular/router';
 import { MessageService } from '../../services/message.service';
@@ -28,7 +30,7 @@ export class PublishersRegisterPage implements OnInit {
       id: [''],
       nome: ['', Validators.required],
       endereco: ['', Validators.required],
-      telefone: [''],
+      telefone: ['', [Validators.minLength(10), Validators.maxLength(11)]],
       foto: ['', Validators.required],
       site: [''],
       email: ['', Validators.required],
@@ -81,6 +83,20 @@ export class PublishersRegisterPage implements OnInit {
         this.messageService.showErrorMessage(`Erro ao salvar a Editora '${nome}'.`, () => this.savePublisher());
       }
     );
+  }
+
+  getIframeValue() {
+    const {iframeMap} = this.form.value;
+    let iframeReady = this.replaceCharacters(iframeMap);
+
+    // Altera o valor do formulário do campo 'iframeMap'
+    this.form.get('iframeMap').setValue(iframeReady);
+  }
+
+  replaceCharacters(iframe: string) {
+    const iframeNewWidth = iframe.replace('width=\"600\"', 'width=\"100%\"');
+    const iframeNew = iframeNewWidth.replaceAll('\"', '\'');
+    return iframeNew;
   }
 
 }
