@@ -38,18 +38,18 @@
               <img [src]="book.imagem" />
             </ion-avatar>
             <ion-label>
-              <h3>Autor: {{book.autor}}</h3>
-              <h3>Gênero: <strong>{{book.genero | genero}}</strong></h3>
+              <h3>Autor: {{ book.autor }}</h3>
+              <h3>Gênero: <strong>{{ book.genero | genero }}</strong></h3>
               <h3>
                 Preço:
                 <ion-text color="success">
-                  <strong> {{book.preco | currency}} </strong>
+                  <strong> {{ book.preco | currency }} </strong>
                 </ion-text>
               </h3>
               <small>
                 Lançamento:
                 <ion-text color="medium">
-                  {{book.publicacao | date: 'dd/MM/yyyy'}}
+                  {{ book.publicacao | date: 'dd/MM/yyyy' }}
                 </ion-text>
               </small>
             </ion-label>

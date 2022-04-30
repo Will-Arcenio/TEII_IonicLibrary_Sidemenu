@@ -10,10 +10,10 @@ import { ViewWillEnter, AlertController } from '@ionic/angular';
 })
 export class BooksFavoritePage implements OnInit, ViewWillEnter {
   loading = false;
-  books: Book[];
+  books: Book[] = [];
 
   constructor(
-    private booksFavorite: BooksFavoriteService,
+    private booksFavoriteService: BooksFavoriteService,
     private alertController: AlertController
   ) { }
 
@@ -27,12 +27,8 @@ export class BooksFavoritePage implements OnInit, ViewWillEnter {
 
   loadBooksFavorite() {
     this.loading = true;
-    this.booksFavorite.getBooksFavorite().subscribe(
-      (book) => {
-        this.books = book;
-        this.loading = false;
-      }
-    );
+    this.books = this.booksFavoriteService.getBooksFavorite();
+    this.loading = false;
   }
 
   // Confirm Book Remove
@@ -53,7 +49,7 @@ export class BooksFavoritePage implements OnInit, ViewWillEnter {
   }
 
   removeFavBook(book: Book) {
-    this.booksFavorite.removeFavoriteBook(book);
+    this.booksFavoriteService.removeFavoriteBook(book);
     this.loadBooksFavorite();
   }
 

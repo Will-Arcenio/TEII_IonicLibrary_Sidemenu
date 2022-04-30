@@ -1,13 +1,15 @@
+/* eslint-disable eqeqeq */
 /* eslint-disable max-len */
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ViewWillEnter, ActionSheetController, AlertController } from '@ionic/angular';
+import { ActionSheetController, AlertController, ViewWillEnter } from '@ionic/angular';
+import { Observable } from 'rxjs';
 import { finalize } from 'rxjs/operators';
-import { environment } from 'src/environments/environment';
 
 import { MessageService } from '../../services/message.service';
 import { Book } from '../books';
 import { BooksApiService } from '../books-api.service';
+import { BooksFavoriteService } from '../books-favorite.service';
 
 @Component({
   selector: 'app-books-list',
@@ -16,22 +18,30 @@ import { BooksApiService } from '../books-api.service';
 })
 export class BooksListPage implements OnInit, ViewWillEnter {
 
-  books: Book[];
+  books: Book[] = [];
   loading = false;
+  booksFavorite: Book[] = [];
 
   constructor(
     private booksApiService: BooksApiService,
     private messageService: MessageService,
     private actionSheetController: ActionSheetController,
     private alertController: AlertController,
-    private router: Router
+    private router: Router,
+    private booksFavoriteService: BooksFavoriteService
   ) { }
 
   ngOnInit() {
-    this.listBooks();
+    this.refreshItems();
   }
   ionViewWillEnter(): void {
+    this.refreshItems();
+  }
+
+  // Reload Items
+  refreshItems() {
     this.listBooks();
+    this.getFavoriteBooks();
   }
 
   // List Books
@@ -79,7 +89,7 @@ export class BooksListPage implements OnInit, ViewWillEnter {
     }).then((alert) => alert.present());
   }
 
-  // Botão para mostrar as opções
+  // Botão para mostrar as opções na listagem
   async showOptions(book: Book) {
     const actionSheet = await this.actionSheetController.create({
       header: 'Opções',
@@ -106,8 +116,10 @@ export class BooksListPage implements OnInit, ViewWillEnter {
       }, {
         text: 'Favoritar',
         icon: 'heart',
+        cssClass: this.isFavorite(book) ? 'isFavorite' : '',
         handler: () => {
-          console.log('Favorite clicked');
+          this.booksFavoriteService.addFavoriteBook(book);
+          this.refreshItems();
         }
       }, {
         text: 'Cancelar',
@@ -120,6 +132,18 @@ export class BooksListPage implements OnInit, ViewWillEnter {
     });
 
     await actionSheet.present();
+  }
+
+  addFavoriteBook(book: Book) {
+    this.booksFavoriteService.addFavoriteBook(book);
+  }
+
+  getFavoriteBooks() {
+    this.booksFavorite = this.booksFavoriteService.getBooksFavorite();
+  }
+
+  isFavorite(book: Book) {
+    return this.booksFavorite.find((bookFav) => bookFav.id == book.id) != null;
   }
 
 }
