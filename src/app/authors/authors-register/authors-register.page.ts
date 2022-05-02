@@ -29,9 +29,9 @@ export class AuthorsRegisterPage implements OnInit {
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
       nacionalidade: ['Brasileiro(a)', Validators.required],
-      redes: ['', Validators.required],
+      redes: [''],
       nascimento: [''],
-      retrato: ['', Validators.required],
+      retrato: [''],
     });
 
     // "+" para converter para número

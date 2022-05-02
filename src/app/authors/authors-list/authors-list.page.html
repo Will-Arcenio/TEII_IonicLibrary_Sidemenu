@@ -29,7 +29,8 @@
       <ion-card *ngFor="let author of authors">
         <ion-item  color="light">
           <ion-thumbnail slot="start">
-            <img [src]="author.retrato">
+            <img [src]="author.retrato" *ngIf="author.retrato?.length" >
+            <img src="https://st3.depositphotos.com/5266903/15721/v/450/depositphotos_157212768-stock-illustration-unknown-person-flat-vector-icon.jpg" *ngIf="!author.retrato?.length" />
           </ion-thumbnail>
           <ion-label>
             <h2>{{ author.nome }} {{ author.sobrenome }}</h2>
