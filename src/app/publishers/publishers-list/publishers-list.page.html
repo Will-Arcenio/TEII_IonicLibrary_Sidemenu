@@ -38,35 +38,41 @@
           <ion-list slot="content">
             <ion-card class="list-publisher-item">
 
-              <ion-card color="secondary">
-                <img [src]="publisher.foto" />
+              <ion-card color="medium">
+                <img [src]="publisher.foto" width="100%"  *ngIf="publisher.foto?.length"/>
                 <ion-card-content>
 
-                  <ion-text>
+                  <ion-text *ngIf="publisher.telefone?.length">
                     <ion-icon name="call"></ion-icon>
                     <p>{{ publisher.telefone }}</p>
+
+                    <br>
                   </ion-text>
 
-                  <br />
+                  <div *ngIf="publisher.site?.length">
+                    <ion-text>
+                      <ion-icon name="browsers-outline"></ion-icon>
+                      <a [href]="'https://' + publisher.site" target="_blank"><p>{{ publisher.site }}</p></a>
+                    </ion-text>
 
-                  <ion-text>
-                    <ion-icon name="browsers-outline"></ion-icon>
-                    <a [href]="'https://' + publisher.site" target="_blank"><p>{{ publisher.site }}</p></a>
-                  </ion-text>
+                    <br>
+                  </div>
 
-                  <br />
+                  <div *ngIf="publisher.email?.length">
+                    <ion-text>
+                      <ion-icon name="mail"></ion-icon>
+                      <a href="mailto:{{ publisher.email }}" target="_blank"><p>{{ publisher.email }}</p></a>
+                    </ion-text>
 
-                  <ion-text>
-                    <ion-icon name="mail"></ion-icon>
-                    <a href="mailto:{{ publisher.email }}" target="_blank"><p>{{ publisher.email }}</p></a>
-                  </ion-text>
+                    <br>
+                  </div>
 
-                  <br>
-
-                  <ion-text>
-                    <ion-icon name="location-outline"></ion-icon>
-                    <a href="{{ publisher.localizacao }}" target="_blank">{{ publisher.endereco }}</a>
-                  </ion-text>
+                  <div *ngIf="publisher.localizacao?.length">
+                    <ion-text>
+                      <ion-icon name="location-outline"></ion-icon>
+                      <a href="{{ publisher.localizacao }}" target="_blank">{{ publisher.endereco }}</a>
+                    </ion-text>
+                  </div>
 
                   <div [innerHtml]="transform(publisher.iframeMap)" class="map-publisher"></div>
                 </ion-card-content>

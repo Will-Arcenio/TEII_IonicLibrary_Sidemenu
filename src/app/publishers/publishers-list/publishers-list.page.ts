@@ -24,10 +24,12 @@ export class PublishersListPage implements OnInit, ViewWillEnter {
   ) { }
 
   ngOnInit() {
-    this.listPublishers();
+    // console.log('Publisher List onInit');
+    // this.listPublishers();
   }
 
   ionViewWillEnter(): void {
+    // console.log('Publisher List viewWillEnter');
     this.listPublishers();
   }
 
