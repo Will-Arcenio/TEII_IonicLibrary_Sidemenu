@@ -11,18 +11,45 @@
 </ion-header>
 
 <ion-content>
+  <!-- LIVROS RECENTES -->
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Lançamentos</ion-card-title>
+      <ion-card-title>Livros adicionados recentemente</ion-card-title>
     </ion-card-header>
 
-    <ion-card-content>
-      Keep close to Nature's heart... and break clear away, once in awhile,
-      and climb a mountain or spend a week in the woods. Wash your spirit clean.
+    <div class="loading-spinner" *ngIf="loading">
+      <ion-spinner color="primary"></ion-spinner>
+    </div>
+
+    <ion-card-content *ngIf="!loading" >
+      <ion-list>
+
+        <ion-item *ngFor="let book of books">
+          <ion-text>{{ book.nome }}</ion-text>
+          <ion-text slot="end"  color="success">{{ book.preco | currency }}</ion-text>
+        </ion-item>
+
+      </ion-list>
+
+      <!-- <div class="loading-spinner" *ngIf="loadingTotal">
+        <ion-spinner color="primary"></ion-spinner>
+        <ion-text class="loading-text">Carregando total de livros...</ion-text>
+      </div>
+
+      <ion-item *ngIf="!loadingTotal" >
+        <ion-text slot="end">Total de Livros:</ion-text>
+        <ion-text slot="end">{{ qtyBooks }}</ion-text>
+      </ion-item> -->
+
     </ion-card-content>
+
+    <ion-item>
+      <ion-text color="medium" slot="end" [routerLink]="['/books-list']">ver todos</ion-text>
+    </ion-item>
+
   </ion-card>
 
-  <ion-card>
+  <!-- <ion-card>
     <ion-item>
       <ion-icon name="pin" slot="start"></ion-icon>
       <ion-label>ion-item in a card, icon left, button right</ion-label>
@@ -55,5 +82,5 @@
       <ion-icon name="walk" slot="start"></ion-icon>
       <ion-label>Card Button Item 2</ion-label>
     </ion-item>
-  </ion-card>
+  </ion-card> -->
 </ion-content>
