@@ -38,20 +38,33 @@
               <img [src]="book.imagem" />
             </ion-avatar>
             <ion-label>
-              <h3>Autor: {{ book.autor }}</h3>
+
+              <div *ngIf="book.autor?.length">
+                <h3 *ngFor="let author of book.autor">Autor: {{ author.nome }} {{ author.sobrenome }}</h3>
+              </div>
+
               <h3>Gênero: <strong>{{ book.genero | genero }}</strong></h3>
+
               <h3>
                 Preço:
                 <ion-text color="success">
                   <strong> {{ book.preco | currency }} </strong>
                 </ion-text>
               </h3>
-              <small>
+
+              <h3>
                 Lançamento:
                 <ion-text color="medium">
                   {{ book.publicacao | date: 'dd/MM/yyyy' }}
                 </ion-text>
-              </small>
+              </h3>
+
+              <div>
+                <small>
+                  Editora:
+                  <ion-text color="medium">{{ book.editora.nome }}</ion-text>
+                </small>
+              </div>
             </ion-label>
           </ion-item>
 

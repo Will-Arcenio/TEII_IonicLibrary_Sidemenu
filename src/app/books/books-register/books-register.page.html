@@ -54,12 +54,20 @@
 
         <ion-item>
           <ion-label position="floating">Autor</ion-label>
-          <ion-input type="text" formControlName="autor"></ion-input>
+          <ion-select formControlName="autor" multiple="true" cancelText="Cancelar" [compareWith]="compareWithAuthors">
+            <ion-select-option *ngFor="let author of authors" [value]="author">
+              {{ author.nome }} {{ author.sobrenome }}
+            </ion-select-option>
+          </ion-select>
         </ion-item>
 
         <ion-item>
           <ion-label position="floating">Editora</ion-label>
-          <ion-input type="text" formControlName="editora"></ion-input>
+          <ion-select formControlName="editora" cancelText="Cancelar" [compareWith]="compareWithPublishers">
+            <ion-select-option *ngFor="let publisher of publishers" [value]="publisher">
+              {{ publisher.nome }}
+            </ion-select-option>
+          </ion-select>
         </ion-item>
 
         <ion-item>

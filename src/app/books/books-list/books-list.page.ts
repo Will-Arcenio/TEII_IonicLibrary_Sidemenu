@@ -95,6 +95,24 @@ export class BooksListPage implements OnInit, ViewWillEnter {
       header: 'Opções',
       cssClass: 'menu-options',
       buttons: [{
+        text: 'Editar',
+        icon: 'pencil',
+        data: 10,
+        handler: () => {
+          this.router.navigate([`/books-register/`, book.id]);
+          this.loading = true;
+        }
+      },
+      {
+        text: 'Favoritar',
+        icon: 'heart',
+        cssClass: this.isFavorite(book) ? 'isFavorite' : '',
+        handler: () => {
+          this.booksFavoriteService.addFavoriteBook(book);
+          this.refreshItems();
+        }
+      },
+      {
         text: 'Excluir',
         role: 'destructive',
         icon: 'trash',
@@ -105,23 +123,8 @@ export class BooksListPage implements OnInit, ViewWillEnter {
         handler: () => {
           this.confirmRemoveBook(book);
         }
-      }, {
-        text: 'Editar',
-        icon: 'pencil',
-        data: 10,
-        handler: () => {
-          this.router.navigate([`/books-register/`, book.id]);
-          this.loading = true;
-        }
-      }, {
-        text: 'Favoritar',
-        icon: 'heart',
-        cssClass: this.isFavorite(book) ? 'isFavorite' : '',
-        handler: () => {
-          this.booksFavoriteService.addFavoriteBook(book);
-          this.refreshItems();
-        }
-      }, {
+      },
+      {
         text: 'Cancelar',
         icon: 'close',
         role: 'cancel',

@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-
-import { BooksApiService } from '../books-api.service';
 import { finalize } from 'rxjs/operators';
+
+import { Authors } from '../../authors/authors';
+import { AuthorsApiService } from '../../authors/authors-api.service';
 import { MessageService } from '../../services/message.service';
+import { BooksApiService } from '../books-api.service';
+import { Publishers } from '../../publishers/publishers';
+import { PublishersApiService } from '../../publishers/publishers-api.service';
 
 @Component({
   selector: 'app-books-register',
@@ -14,6 +18,8 @@ import { MessageService } from '../../services/message.service';
 export class BooksRegisterPage implements OnInit {
   form: FormGroup;
   loading = false;
+  authors: Authors[];
+  publishers: Publishers[];
   edit = false;
 
   constructor(
@@ -21,10 +27,15 @@ export class BooksRegisterPage implements OnInit {
     private activatedRoute: ActivatedRoute,
     private booksApiService: BooksApiService,
     private router: Router,
-    private messageService: MessageService
+    private messageService: MessageService,
+    private authorsApiService: AuthorsApiService,
+    private publishersApiService: PublishersApiService
   ) { }
 
   ngOnInit() {
+    this.authorsApiService.getAuthors().subscribe((author) => this.authors = author);
+    this.publishersApiService.getPublishers().subscribe((publisher) => this.publishers = publisher);
+
     this.form = this.formBuilder.group({
       id: [''],
       referencia: ['', [Validators.required, Validators.minLength(4)]],
@@ -83,6 +94,22 @@ export class BooksRegisterPage implements OnInit {
         this.messageService.showErrorMessage(`Erro ao salvar o Livro '${nome}'.`, () => this.saveBook());
       }
     );
+  }
+
+  compareWithAuthors(a1: Authors, a2: Authors | Authors[]) {
+    if (!a1 || !a2) {
+      return a1 === a2;
+    }
+
+    if (Array.isArray(a2)) {
+      return a2.some((a: Authors) => a.id === a1.id);
+    }
+
+    return a1.id === a2.id;
+  }
+
+  compareWithPublishers(p1: Publishers, p2: Publishers) {
+    return p1 && p2 ? p1.id === p2.id : p1 === p2;
   }
 
 }

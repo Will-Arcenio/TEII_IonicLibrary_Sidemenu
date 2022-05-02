@@ -1,11 +1,13 @@
+import { Authors } from '../authors/authors';
+import { Publishers } from '../publishers/publishers';
 export interface Book {
   id: number;
   referencia: string;
 	nome: string;
 	sinopse: string;
   genero: Genero;
-	autor: string;
-  editora: string;
+	autor: Authors[];
+  editora: Publishers;
   publicacao: Date;
   preco: number;
 	imagem: string;
