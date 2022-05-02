@@ -6,8 +6,28 @@
       "nome": "A Garota do Lago",
       "sinopse": "Summit Lake, uma pequena cidade entre montanhas, é esse tipo de lugar, bucólico e com encantadoras casas dispostas à beira de um longo trecho de água intocada.Duas semanas atrás, a estudante de direito Becca Eckersley foi brutalmente assassinada em uma dessas casas. Filha de um poderoso advogado, Becca estava no auge de sua vida. Atraída instintivamente pela notícia, a repórter Kelsey Castle vai até a cidade para investigar o caso. ...E LOGO SE ESTABELECE UMA CONEXÃO ÍNTIMA QUANDO UM VIVO CAMINHA NAS MESMAS PEGADAS DOS MORTOS...E enquanto descobre sobre as amizades de Becca, sua vida amorosa e os segredos que ela guardava, a repórter fica cada vez mais convencida de que a verdade sobre o que aconteceu com Becca pode ser a chave para superar as marcas sombrias de seu próprio passado.",
       "genero": "Ficção Literária",
-      "autor": "Charlie Donlea",
-      "editora": "Faro Editorial",
+      "autor": [
+        {
+          "id": 4,
+          "nome": "Charlie",
+          "sobrenome": "Donlea",
+          "nacionalidade": "Norte Americano(a)",
+          "redes": "charlie_donlea",
+          "nascimento": "",
+          "retrato": "https://www.publishnews.com.br/estaticos/uploads/2019/03/vg5dSkkjDw1NxMza2e9nmRN9iYwySHMiU6grAzF0AFjJdM1Qcem82EdldXMnY6cJts76qwdtybskwExG.jpg"
+        }
+      ],
+      "editora": {
+        "id": 1,
+        "nome": "Faro Editorial",
+        "endereco": "Av. Andrômeda, 885 - Sala 310",
+        "telefone": "(48) 99908-0521",
+        "foto": "https://www.ideiasdecor.com/wp-content/uploads/2019/04/frente-de-casas-60.jpg",
+        "site": "faroeditorial.com.br",
+        "email": "contato@faroeditorial.com.br",
+        "localizacao": "https://goo.gl/maps/C3uvgcD7te9VFEMv6",
+        "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14637.275767686462!2d-46.8648789!3d-23.4850189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f5de0d3b9cce1f4!2sFaro%20Editorial!5e0!3m2!1spt-BR!2sbr!4v1651019668762!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+      },
       "publicacao": "2017-01-01",
       "preco": 15.9,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/516VOgxwg2L._SX339_BO1,204,203,200_.jpg"
@@ -18,8 +38,28 @@
       "nome": "O Morro dos Ventos Uivantes",
       "sinopse": "Único romance da escritora inglesa Emily Bronte, O morro dos ventos uivantes retrata uma trágica historia de amor e obsessão em que os personagens principais são a obstinada e geniosa Catherine Earnshaw e seu irmão adotivo, Heathcliff. Grosseiro, humilhado e rejeitado, ele guarda apenas rancor no coração, mas tem com Catherine um relaciona- mento marcado por amor e, ao mesmo tempo, ódio. Essa ligação perdura mesmo com o casamento de Catherine com Edgar Linton.",
       "genero": "Não Ficção",
-      "autor": "Emily Brontë",
-      "editora": "Principis",
+      "autor": [
+        {
+          "id": 3,
+          "nome": "Emily ",
+          "sobrenome": "Brontë",
+          "nacionalidade": "Britânico(a)",
+          "redes": "[N/A]",
+          "nascimento": "1922-07-30T00:00:00-03:00",
+          "retrato": "https://img.skoob.com.br/fNtwj77q4POAjXYxHzKNyOr-kqQ=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/autores/62/103311387204617G.jpg"
+        }
+      ],
+      "editora": {
+        "id": 3,
+        "nome": "Principis",
+        "endereco": "",
+        "telefone": " 1137619500",
+        "foto": "https://scontent.fccm9-1.fna.fbcdn.net/v/t1.6435-9/103281467_698118000762252_207628081169816410_n.png?_nc_cat=108&ccb=1-5&_nc_sid=973b4a&_nc_ohc=P5un5dd3-mwAX-h-O6i&_nc_ht=scontent.fccm9-1.fna&oh=00_AT9I7ng4gQDTPPC2j2Tt-fduLXLhHkXj1NC-cl1rOtfmAw&oe=6292E616",
+        "site": "https://www.cirandacultural.com.br/vitrine/principis",
+        "email": " falecom@cirandacultural.com.br",
+        "localizacao": "",
+        "iframeMap": ""
+      },
       "publicacao": "2019-06-17",
       "preco": 11.2,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/51HgwirtaDL._SX346_BO1,204,203,200_.jpg"
@@ -30,8 +70,28 @@
       "nome": "O Agir Invisível de Deus",
       "sinopse": "Vivemos dias em que a fé cristã tem crescido e se espalhado grandemente. Mas temos que reconhecer que esse avanço tem acontecido a uma velocidade muito maior do que a capacidade de a igreja amadurecer. Com isso, a maneira de deus agir nem sempre corresponde às nossas expectativas. Mesmo imaturos, imaginamos que podemos entender a maneira como deus determina sua vontade. Tentamos encontrar respostas para tudo, como se nosso raciocínio limitado pudesse esquadrinhar a mente do senhor. Se algo acontece com alguém, sabemos por que; se deixa de acontecer, também temos a resposta. Ao escrever sobre o agir invisível de deus, o autor demonstra que as nossas explicações sobre a vida estão longe de serem completas. Lembra-nos ainda de que o nosso alvo deveria ser buscar em deus uma dimensão mais profunda de revelação da sua palavra. Precisamos confiar na soberania de deus e aceitar o fato de que nem sempre teremos todas as respostas, mas sempre poderemos caminhar na certeza de que ele tem o melhor para nós, quer compreendamos, quer não.",
       "genero": "Religioso",
-      "autor": "Luciano Subirá",
-      "editora": "Vida Livros",
+      "autor": [
+        {
+          "id": 1,
+          "nome": "Luciano",
+          "sobrenome": "Subirá",
+          "nacionalidade": "Brasileiro(a)",
+          "redes": "@lucianosubira",
+          "nascimento": "1972-12-20",
+          "retrato": "https://hagnos.com.br/img/m/48.jpg"
+        }
+      ],
+      "editora": {
+        "id": 4,
+        "nome": "Vida",
+        "endereco": "Rua Conde de Sarzedas, 246 - Liberdade",
+        "telefone": "1126187000",
+        "foto": "https://editoravida.com.br/wp-content/themes/editoravida/assets/images/logo.png",
+        "site": "https://editoravida.com.br/",
+        "email": "atendimento@editoravida.com.br",
+        "localizacao": "https://g.page/editora-vida-livraria-vida?share",
+        "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1848563.8622779278!2d-48.877343338811144!3d-25.18715541167748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce590775630823%3A0xc98737a6f0b98105!2sEditora%20Vida!5e0!3m2!1spt-BR!2sbr!4v1651338611607!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+      },
       "publicacao": "2019-06-01",
       "preco": 20.33,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/416JpZJX0KL._SX367_BO1,204,203,200_.jpg"
@@ -42,8 +102,28 @@
       "nome": "Bem-vindo, Espírito Santo: Como a presença do Espírito Santo atua em nossa vida",
       "sinopse": "ABRA AS PORTAS DO SEU CORAÇÃOEm seu primeiro livro, Bom dia, Espírito Santo, Benny Hinn apresentou o Espírito Santo a milhões de pessoas como um guia pessoal e amigo sempre presente. Mas ainda havia mais a dizer sobre a Terceira Pessoa da Trindade, o que o autor faz com propriedade em Bem-vindo, Espírito Santo, livro que a Renova traz de volta ao mercado em uma nova edição revisada.NESTE LIVRO, VOCÊ VAI DESCOBRIR:• Os nomes e títulos do Espírito Santo• A obra do Espírito na vida de Jesus Cristo• A comunhão transformadora com a Terceira Pessoa da Trindade• Como remover as barreiras para as bênçãosEm Bem-Vindo, Espírito Santo, a Terceira Pessoa da Trindade é apresentada como o grande transformador da vida, cheio de poder para mudar a história do mundo – e a sua também!'É preciso ter paixão pelo poder divino. Você precisa ter essa fome em seu coração, uma fome que o faça continuar procurando até experimentar, em sua própria vida, os milagres descritos pela Bíblia.' – Benny Hinn",
       "genero": "Religioso",
-      "autor": "Benny Hinn",
-      "editora": "Renova",
+      "autor": [
+        {
+          "id": 2,
+          "nome": "Benny",
+          "sobrenome": "Hinn",
+          "nacionalidade": "Israelense",
+          "redes": "@benny_hinn",
+          "nascimento": "1952-12-03T00:00:00-02:00",
+          "retrato": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Benny_Hinn_2019_%28361354094%29.jpg"
+        }
+      ],
+      "editora": {
+        "id": 5,
+        "nome": "Renovar",
+        "endereco": "Av. Paulista, 2073 - Bela Vista",
+        "telefone": "113285-4033",
+        "foto": "",
+        "site": "",
+        "email": "",
+        "localizacao": "https://goo.gl/maps/LGEYE3uBSGwa42N16",
+        "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.927335754604!2d-46.6441971!3d-23.571053100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59962c4bbe59%3A0x20607dec95af535f!2sAv.%20Paulista%2C%202073%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004821-220!5e0!3m2!1spt-BR!2sbr!4v1651339139121!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+      },
       "publicacao": "2014-09-08",
       "preco": 14.49,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/41Di8dib1+L._SX321_BO1,204,203,200_.jpg"
@@ -54,8 +134,28 @@
       "nome": "Código Limpo",
       "sinopse": "Mesmo um código ruim pode funcionar. Mas se ele não for limpo, pode acabar com uma empresa de desenvolvimento. Perdem-se a cada ano horas incontáveis e recursos importantes devido a um código mal escrito. Mas não precisa ser assim. O renomado especialista em software, Robert C. Martin, apresenta um paradigma revolucionário com Código limpo: Habilidades Práticas do Agile Software.",
       "genero": "Não Ficção",
-      "autor": "Robert C. Martin",
-      "editora": "Alta Books",
+      "autor": [
+        {
+          "id": 5,
+          "nome": "Robert",
+          "sobrenome": " Cecil Martin",
+          "nacionalidade": "Norte Americano(a)",
+          "redes": "robert_cecil",
+          "nascimento": "2022-04-05T13:36:00-03:00",
+          "retrato": "https://alchetron.com/cdn/robert-cecil-martin-4dfac895-275f-44c8-b381-c341d301452-resize-750.jpeg"
+        }
+      ],
+      "editora": {
+        "id": 6,
+        "nome": "Alta Books",
+        "endereco": "R. Viúva Cláudio, 291 - Jacaré",
+        "telefone": "213278-8069",
+        "foto": "https://altabooks.com.br/wp-content/uploads/2021/11/cropped-logo-alta-books-cor-com-preto-2019-png-768x746.png",
+        "site": "https://altabooks.com.br/",
+        "email": "altabooks@altabooks.com.br",
+        "localizacao": "https://goo.gl/maps/rouuzs3b7r2RD5SE6",
+        "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.636254766!2d-43.25940948448805!3d-22.88989164302424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c2f4fcae877%3A0xf5c6c56b974177ff!2sEditora%20Alta%20Books!5e0!3m2!1spt-BR!2sbr!4v1651339559853!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+      },
       "publicacao": "2019-07-22T00:00:00-03:00",
       "preco": 67,
       "imagem": "https://images-na.ssl-images-amazon.com/images/I/71dH97FwGbL.jpg"
@@ -66,8 +166,28 @@
       "nome": "Engenharia de Software Moderna",
       "sinopse": "Engenharia de Software Moderna é um livro-texto que cobre um amplo conjunto de princípios e práticas para desenvolvimento de software com produtividade e qualidade, incluindo: métodos ágeis, como Scrum, XP e Kanban; levantamento ágil de requisitos, incluindo histórias de usuários, MVPs e testes A/B; projeto de software, tratando de propriedades de projeto, princípios e padrões de projeto; arquitetura de software, incluindo padrões arquiteturais como MVC, microsserviços e publish/subscribe; testes de Software, com ênfase em testes de unidade, testabilidade, cobertura e Desenvolvimento Dirigido por Testes (TDD); refactoring, com exemplos reais de refactorings e code smells; e DevOps, incluindo controle de versões (usando git), integração e deployment contínuo. O livro destina-se a alunos de cursos de graduação em Ciência da Computação, Sistemas de Informação, Engenharia de Software e Engenharia de Computação, dentre outros. Pode ser usado também por profissionais que buscam atualização em Engenharia de Software.",
       "genero": "Ficção Científica",
-      "autor": "Vários Autores",
-      "editora": "Independente",
+      "autor": [
+        {
+          "id": 6,
+          "nome": "Vários",
+          "sobrenome": "Autores",
+          "nacionalidade": "Brasileiro(a)",
+          "redes": "",
+          "nascimento": "",
+          "retrato": ""
+        }
+      ],
+      "editora": {
+        "id": 7,
+        "nome": "Independente",
+        "endereco": "",
+        "telefone": "",
+        "foto": "",
+        "site": "",
+        "email": "",
+        "localizacao": "",
+        "iframeMap": ""
+      },
       "publicacao": "2022-01-01T00:00:00-03:00",
       "preco": 65.9,
       "imagem": "https://m.media-amazon.com/images/P/B086K5QJ9V.01._SCLZZZZZZZ_SX500_.jpg"
@@ -88,7 +208,7 @@
       "nome": "Benny",
       "sobrenome": "Hinn",
       "nacionalidade": "Israelense",
-      "redes": "@benny_hinn",
+      "redes": "",
       "nascimento": "1952-12-03T00:00:00-02:00",
       "retrato": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Benny_Hinn_2019_%28361354094%29.jpg"
     },
@@ -97,9 +217,36 @@
       "nome": "Emily ",
       "sobrenome": "Brontë",
       "nacionalidade": "Britânico(a)",
-      "redes": "[N/A]",
+      "redes": "",
       "nascimento": "1922-07-30T00:00:00-03:00",
       "retrato": "https://img.skoob.com.br/fNtwj77q4POAjXYxHzKNyOr-kqQ=/200x/center/top/smart/filters:format(jpeg)/https://skoob.s3.amazonaws.com/autores/62/103311387204617G.jpg"
+    },
+    {
+      "id": 4,
+      "nome": "Charlie",
+      "sobrenome": "Donlea",
+      "nacionalidade": "Norte Americano(a)",
+      "redes": "",
+      "nascimento": "",
+      "retrato": "https://www.publishnews.com.br/estaticos/uploads/2019/03/vg5dSkkjDw1NxMza2e9nmRN9iYwySHMiU6grAzF0AFjJdM1Qcem82EdldXMnY6cJts76qwdtybskwExG.jpg"
+    },
+    {
+      "id": 5,
+      "nome": "Robert",
+      "sobrenome": " Cecil Martin",
+      "nacionalidade": "Norte Americano(a)",
+      "redes": "",
+      "nascimento": "2022-04-05T13:36:00-03:00",
+      "retrato": "https://alchetron.com/cdn/robert-cecil-martin-4dfac895-275f-44c8-b381-c341d301452-resize-750.jpeg"
+    },
+    {
+      "id": 6,
+      "nome": "Vários",
+      "sobrenome": "Autores",
+      "nacionalidade": "Brasileiro(a)",
+      "redes": "",
+      "nascimento": "",
+      "retrato": ""
     }
   ],
   "publishers": [
@@ -113,6 +260,61 @@
       "email": "contato@faroeditorial.com.br",
       "localizacao": "https://goo.gl/maps/C3uvgcD7te9VFEMv6",
       "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14637.275767686462!2d-46.8648789!3d-23.4850189!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x8f5de0d3b9cce1f4!2sFaro%20Editorial!5e0!3m2!1spt-BR!2sbr!4v1651019668762!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen=' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    },
+    {
+      "id": 3,
+      "nome": "Principis",
+      "endereco": "",
+      "telefone": " 1137619500",
+      "foto": "https://scontent.fccm9-1.fna.fbcdn.net/v/t1.6435-9/103281467_698118000762252_207628081169816410_n.png?_nc_cat=108&ccb=1-5&_nc_sid=973b4a&_nc_ohc=P5un5dd3-mwAX-h-O6i&_nc_ht=scontent.fccm9-1.fna&oh=00_AT9I7ng4gQDTPPC2j2Tt-fduLXLhHkXj1NC-cl1rOtfmAw&oe=6292E616",
+      "site": "https://www.cirandacultural.com.br/vitrine/principis",
+      "email": " falecom@cirandacultural.com.br",
+      "localizacao": "",
+      "iframeMap": ""
+    },
+    {
+      "id": 4,
+      "nome": "Vida",
+      "endereco": "Rua Conde de Sarzedas, 246 - Liberdade",
+      "telefone": "1126187000",
+      "foto": "https://editoravida.com.br/wp-content/themes/editoravida/assets/images/logo.png",
+      "site": "https://editoravida.com.br/",
+      "email": "atendimento@editoravida.com.br",
+      "localizacao": "https://g.page/editora-vida-livraria-vida?share",
+      "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1848563.8622779278!2d-48.877343338811144!3d-25.18715541167748!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce590775630823%3A0xc98737a6f0b98105!2sEditora%20Vida!5e0!3m2!1spt-BR!2sbr!4v1651338611607!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    },
+    {
+      "id": 5,
+      "nome": "Renovar",
+      "endereco": "Av. Paulista, 2073 - Bela Vista",
+      "telefone": "113285-4033",
+      "foto": "",
+      "site": "",
+      "email": "",
+      "localizacao": "https://goo.gl/maps/LGEYE3uBSGwa42N16",
+      "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.927335754604!2d-46.6441971!3d-23.571053100000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59962c4bbe59%3A0x20607dec95af535f!2sAv.%20Paulista%2C%202073%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004821-220!5e0!3m2!1spt-BR!2sbr!4v1651339139121!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    },
+    {
+      "id": 6,
+      "nome": "Alta Books",
+      "endereco": "R. Viúva Cláudio, 291 - Jacaré",
+      "telefone": "213278-8069",
+      "foto": "https://altabooks.com.br/wp-content/uploads/2021/11/cropped-logo-alta-books-cor-com-preto-2019-png-768x746.png",
+      "site": "https://altabooks.com.br/",
+      "email": "altabooks@altabooks.com.br",
+      "localizacao": "https://goo.gl/maps/rouuzs3b7r2RD5SE6",
+      "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3675.636254766!2d-43.25940948448805!3d-22.88989164302424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x997c2f4fcae877%3A0xf5c6c56b974177ff!2sEditora%20Alta%20Books!5e0!3m2!1spt-BR!2sbr!4v1651339559853!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+    },
+    {
+      "id": 7,
+      "nome": "Independente",
+      "endereco": "",
+      "telefone": "",
+      "foto": "",
+      "site": "",
+      "email": "",
+      "localizacao": "",
+      "iframeMap": ""
     }
   ]
 }
