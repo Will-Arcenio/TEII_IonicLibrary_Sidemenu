@@ -61,8 +61,7 @@ export class AuthorsRegisterPage implements OnInit {
   }
 
   saveAuthor() {
-    const {nome} = this.form.value;
-    const {sobrenome} = this.form.value;
+    const {nome, sobrenome} = this.form.value;
     this.loading = true;
 
     this.authorsApiService.saveAuthor(this.form.value).pipe(finalize(() => this.loading = false)).subscribe(

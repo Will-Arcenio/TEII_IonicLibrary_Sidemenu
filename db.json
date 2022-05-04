@@ -191,6 +191,88 @@
       "publicacao": "2022-01-01T00:00:00-03:00",
       "preco": 65.9,
       "imagem": "https://m.media-amazon.com/images/P/B086K5QJ9V.01._SCLZZZZZZZ_SX500_.jpg"
+    },
+    {
+      "id": 7,
+      "referencia": "000007",
+      "nome": "Por Lugares Incríveis",
+      "sinopse": "Violet Markey tinha uma vida perfeita, mas todos os seus planos deixam de fazer sentido quando ela e a irmã sofrem um acidente de carro e apenas Violet sobrevive. Sentindo-se culpada pelo que aconteceu, a garota se afasta de todos e tenta descobrir como seguir em frente. Theodore Finch é o esquisito da escola, perseguido pelos valentões e chamado de “aberração” por onde passa. Para piorar, é obrigado a lidar com longos períodos de depressão, o pai violento e a apatia do resto da família. Enquanto Violet conta os dias para o fim das aulas, quando poderá ir embora da cidadezinha onde mora, Finch pesquisa diferentes métodos de suicídio e imagina se conseguiria levar algum deles adiante. Em uma dessas tentativas, ele vai parar no alto da torre da escola e, para sua surpresa, encontra Violet, também prestes a pular. Um ajuda o outro a sair dali, e essa dupla improvável se une para fazer um trabalho de geografia: conhecer lugares incríveis do estado onde moram. Ao lado de Finch, Violet para de contar os dias e finalmente passa a vivê-los. O garoto, por sua vez, encontra alguém com quem pode ser ele mesmo, e torce para que consiga se manter desperto.",
+      "genero": "Romance",
+      "autor": [
+        {
+          "id": 7,
+          "nome": "Jennifer",
+          "sobrenome": "Niven",
+          "nacionalidade": "Norte Americano(a)",
+          "redes": "",
+          "nascimento": "1992-05-05T14:50:00-03:00",
+          "retrato": "data:image/jpeg;base64,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"
+        }
+      ],
+      "editora": {
+        "id": 8,
+        "nome": "Seguinte",
+        "endereco": "",
+        "telefone": "",
+        "foto": "https://www.editoraseguinte.com.br/selecao/images/seguinte.png",
+        "site": "editoraseguinte.com.br/selecao/",
+        "email": "contato@seguinte.com.br",
+        "localizacao": "",
+        "iframeMap": ""
+      },
+      "publicacao": "2015-01-05T00:00:00-02:00",
+      "preco": 21.9,
+      "imagem": "https://m.media-amazon.com/images/P/B00S73S7XY.01._SCLZZZZZZZ_SX500_.jpg"
+    },
+    {
+      "id": 8,
+      "referencia": "000010",
+      "nome": "Dom Quixote de la Mancha",
+      "sinopse": "asdasjnfaslfnajlskfnbjasonfaslknfaklsnfjalksnfjlkasnflkasnfklanklfnaklfna",
+      "genero": "Ficção Científica",
+      "autor": [
+        {
+          "id": 5,
+          "nome": "Robert",
+          "sobrenome": " Cecil Martin",
+          "nacionalidade": "Norte Americano(a)",
+          "redes": "",
+          "nascimento": "2022-04-05T13:36:00-03:00",
+          "retrato": "https://alchetron.com/cdn/robert-cecil-martin-4dfac895-275f-44c8-b381-c341d301452-resize-750.jpeg"
+        },
+        {
+          "id": 7,
+          "nome": "Jennifer",
+          "sobrenome": "Niven",
+          "nacionalidade": "Norte Americano(a)",
+          "redes": "",
+          "nascimento": "1992-05-05T14:50:00-03:00",
+          "retrato": "data:image/jpeg;base64,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"
+        },
+        {
+          "id": 8,
+          "nome": "Miguel",
+          "sobrenome": "De Cervantes Saavedra",
+          "nacionalidade": "Coreano(a)",
+          "redes": "",
+          "nascimento": "2022-05-18T20:22:00-03:00",
+          "retrato": "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSPnYAzPvzH5GMP55VpTZa4RbWpq03OqTAHOwfBnPTHosd7mdUrs8ikom31M8_I"
+        }
+      ],
+      "editora": {
+        "id": 9,
+        "nome": "Anaya Educacional",
+        "endereco": "Rua tal",
+        "telefone": "(48) 12514-7812",
+        "foto": "https://www.esucri.com.br/image/c3JjPWltZy9sYXlvdXQvZXN1Y3JpL2ZvdG8tbGQucG5nJnNlY3VyZT17YnVybn0=.png",
+        "site": "esucri.com.br",
+        "email": "",
+        "localizacao": "https://goo.gl/maps/J3W9ZK4y6o3kaRK76",
+        "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.279734674813!2d-49.40339928437272!3d-28.71118497750723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952182361d8533c1%3A0x6a02aa95934ac165!2zQXNzb2NpYcOnxIFvIEVzdWNyaQ!5e0!3m2!1spt-BR!2sbr!4v1651620014980!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
+      },
+      "publicacao": "2022-05-24T20:23:00-03:00",
+      "preco": 51.98,
+      "imagem": "https://images-na.ssl-images-amazon.com/images/I/51EACWLugLL._SX352_BO1,204,203,200_.jpg"
     }
   ],
   "authors": [
@@ -199,7 +281,7 @@
       "nome": "Luciano",
       "sobrenome": "Subirá",
       "nacionalidade": "Brasileiro(a)",
-      "redes": "@lucianosubira",
+      "redes": "@lucianosubirazsxzx",
       "nascimento": "1972-12-20",
       "retrato": "https://hagnos.com.br/img/m/48.jpg"
     },
@@ -247,6 +329,24 @@
       "redes": "",
       "nascimento": "",
       "retrato": ""
+    },
+    {
+      "id": 7,
+      "nome": "Jennifer",
+      "sobrenome": "Niven",
+      "nacionalidade": "Norte Americano(a)",
+      "redes": "",
+      "nascimento": "1992-05-05T14:50:00-03:00",
+      "retrato": "data:image/jpeg;base64,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"
+    },
+    {
+      "id": 8,
+      "nome": "Miguel",
+      "sobrenome": "De Cervantes Saavedra",
+      "nacionalidade": "Coreano(a)",
+      "redes": "",
+      "nascimento": "2022-05-18T20:22:00-03:00",
+      "retrato": "http://t2.gstatic.com/licensed-image?q=tbn:ANd9GcSPnYAzPvzH5GMP55VpTZa4RbWpq03OqTAHOwfBnPTHosd7mdUrs8ikom31M8_I"
     }
   ],
   "publishers": [
@@ -265,7 +365,7 @@
       "id": 3,
       "nome": "Principis",
       "endereco": "",
-      "telefone": " 1137619500",
+      "telefone": "(11) 3761-9500",
       "foto": "https://scontent.fccm9-1.fna.fbcdn.net/v/t1.6435-9/103281467_698118000762252_207628081169816410_n.png?_nc_cat=108&ccb=1-5&_nc_sid=973b4a&_nc_ohc=P5un5dd3-mwAX-h-O6i&_nc_ht=scontent.fccm9-1.fna&oh=00_AT9I7ng4gQDTPPC2j2Tt-fduLXLhHkXj1NC-cl1rOtfmAw&oe=6292E616",
       "site": "https://www.cirandacultural.com.br/vitrine/principis",
       "email": " falecom@cirandacultural.com.br",
@@ -276,7 +376,7 @@
       "id": 4,
       "nome": "Vida",
       "endereco": "Rua Conde de Sarzedas, 246 - Liberdade",
-      "telefone": "1126187000",
+      "telefone": "(11) 2618-7000",
       "foto": "https://editoravida.com.br/wp-content/themes/editoravida/assets/images/logo.png",
       "site": "https://editoravida.com.br/",
       "email": "atendimento@editoravida.com.br",
@@ -287,7 +387,7 @@
       "id": 5,
       "nome": "Renovar",
       "endereco": "Av. Paulista, 2073 - Bela Vista",
-      "telefone": "113285-4033",
+      "telefone": "(11) 99904-5510",
       "foto": "",
       "site": "",
       "email": "",
@@ -298,7 +398,7 @@
       "id": 6,
       "nome": "Alta Books",
       "endereco": "R. Viúva Cláudio, 291 - Jacaré",
-      "telefone": "213278-8069",
+      "telefone": "(21) 3278-8069",
       "foto": "https://altabooks.com.br/wp-content/uploads/2021/11/cropped-logo-alta-books-cor-com-preto-2019-png-768x746.png",
       "site": "https://altabooks.com.br/",
       "email": "altabooks@altabooks.com.br",
@@ -315,6 +415,28 @@
       "email": "",
       "localizacao": "",
       "iframeMap": ""
+    },
+    {
+      "id": 8,
+      "nome": "Seguinte",
+      "endereco": "",
+      "telefone": "",
+      "foto": "https://www.editoraseguinte.com.br/selecao/images/seguinte.png",
+      "site": "editoraseguinte.com.br/selecao/",
+      "email": "contato@seguinte.com.br",
+      "localizacao": "",
+      "iframeMap": ""
+    },
+    {
+      "id": 9,
+      "nome": "Anaya Educacional",
+      "endereco": "Rua tal",
+      "telefone": "(48) 12514-7812",
+      "foto": "https://www.esucri.com.br/image/c3JjPWltZy9sYXlvdXQvZXN1Y3JpL2ZvdG8tbGQucG5nJnNlY3VyZT17YnVybn0=.png",
+      "site": "esucri.com.br",
+      "email": "",
+      "localizacao": "https://goo.gl/maps/J3W9ZK4y6o3kaRK76",
+      "iframeMap": "<iframe src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3499.279734674813!2d-49.40339928437272!3d-28.71118497750723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x952182361d8533c1%3A0x6a02aa95934ac165!2zQXNzb2NpYcOnxIFvIEVzdWNyaQ!5e0!3m2!1spt-BR!2sbr!4v1651620014980!5m2!1spt-BR!2sbr' width='100%' height='450' style='border:0;' allowfullscreen='' loading='lazy' referrerpolicy='no-referrer-when-downgrade'></iframe>"
     }
   ]
 }

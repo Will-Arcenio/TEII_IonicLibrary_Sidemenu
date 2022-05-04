@@ -6,6 +6,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 import { MessageService } from '../../services/message.service';
 import { PublishersApiService } from '../publishers-api.service';
 import { finalize } from 'rxjs/operators';
+import { MasksService } from '../../services/masks.service';
 
 @Component({
   selector: 'app-publishers-register',
@@ -21,6 +22,7 @@ export class PublishersRegisterPage implements OnInit {
     private formBiulder: FormBuilder,
     private router: Router,
     private messageService: MessageService,
+    private maskService: MasksService,
     private activatedRoute: ActivatedRoute,
     private publishersApiService: PublishersApiService
   ) { }
@@ -29,11 +31,11 @@ export class PublishersRegisterPage implements OnInit {
     this.form = this.formBiulder.group({
       id: [''],
       nome: ['', Validators.required],
-      endereco: ['', Validators.required],
-      telefone: ['', [Validators.minLength(10), Validators.maxLength(11)]],
-      foto: ['', Validators.required],
+      endereco: ['', [Validators.maxLength(40)]],
+      telefone: ['', [Validators.minLength(13)]],
+      foto: [''],
       site: [''],
-      email: ['', Validators.required],
+      email: [''],
       localizacao: [''],
       iframeMap: ['']
     });
@@ -97,6 +99,11 @@ export class PublishersRegisterPage implements OnInit {
     const iframeNewWidth = iframe.replace('width=\"600\"', 'width=\"100%\"');
     const iframeNew = iframeNewWidth.replaceAll('\"', '\'');
     return iframeNew;
+  }
+
+  phoneFormat() {
+    let phone = this.form.get('telefone').value;
+    this.form.get('telefone').setValue(this.maskService.formatPhoneNumber(phone));
   }
 
 }
