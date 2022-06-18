@@ -77,8 +77,10 @@ export class AuthorsRegisterPage implements OnInit {
         }
         this.router.navigate(['authors-list']);
       },
-      () => {
-        this.messageService.showErrorMessage(`Erro ao salvar o Autor(a) '${nome} ${sobrenome}'.`, () => this.saveAuthor());
+      ({error}) => {
+        const erro = error?.erro ?? '';
+        const message = `Erro ao salvar o Autor. ${erro ? 'ERRO: '+erro : ''}`;
+        this.messageService.showErrorMessage(message, () => this.saveAuthor());
       }
     );
   }
