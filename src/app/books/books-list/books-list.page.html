@@ -40,7 +40,16 @@
             <ion-label>
 
               <div *ngIf="book.autor?.length">
-                <h3 *ngFor="let author of book.autor">Autor: {{ author.nome }} {{ author.sobrenome }}</h3>
+
+                <div *ngIf="book.autor?.length > 1" class="many-authors">
+                  <h3>Autores</h3>
+                  <h3 *ngFor="let author of book.autor">» {{ author.nome }} {{ author.sobrenome }}</h3>
+                </div>
+
+                <div *ngIf="book.autor?.length <= 1">
+                  <h3 *ngFor="let author of book.autor">Autor: {{ author.nome }} {{ author.sobrenome }}</h3>
+                </div>
+
               </div>
 
               <h3>Gênero: <strong>{{ book.genero | genero }}</strong></h3>
