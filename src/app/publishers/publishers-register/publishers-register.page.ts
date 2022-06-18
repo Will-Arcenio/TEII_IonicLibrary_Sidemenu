@@ -29,7 +29,7 @@ export class PublishersRegisterPage implements OnInit {
 
   ngOnInit() {
     this.form = this.formBiulder.group({
-      id: [''],
+      id: [0],
       nome: ['', Validators.required],
       endereco: ['', [Validators.maxLength(40)]],
       telefone: ['', [Validators.minLength(13)]],
