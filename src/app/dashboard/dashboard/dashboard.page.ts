@@ -38,9 +38,9 @@ export class DashboardPage implements OnInit, ViewWillEnter {
 
   getLast5Books() {
     this.loading = true;
-    this.booksApiService.getBooks().pipe(finalize(() => this.loading = false)).subscribe(
+    this.booksApiService.getLastFiveBooks().pipe(finalize(() => this.loading = false)).subscribe(
       (book) => {
-        this.books = book.reverse().slice(0, 5);
+        this.books = book;
       },
       () => {
         this.messageService.showErrorMessage(`Erro ao carregar os livros`, () => this.getLast5Books());

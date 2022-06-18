@@ -17,6 +17,10 @@ export class BooksApiService {
     return this.httpClient.get<Book[]>(`${environment.apiUrl}/books`);
   }
 
+  getLastFiveBooks() {
+    return this.httpClient.get<Book[]>(`${environment.apiUrl}/books/lastbooks`);
+  }
+
   removeBook(id: number) {
     return this.httpClient.delete<void>(`${environment.apiUrl}/books/${id}`);
   }
