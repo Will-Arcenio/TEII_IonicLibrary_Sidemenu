@@ -37,11 +37,11 @@ export class BooksRegisterPage implements OnInit {
     this.publishersApiService.getPublishers().subscribe((publisher) => this.publishers = publisher);
 
     this.form = this.formBuilder.group({
-      id: [''],
+      id: [0],
       referencia: ['', [Validators.required, Validators.minLength(4)]],
       nome: ['', Validators.required],
       sinopse: ['', Validators.required],
-      genero: ['Ficção Científica', Validators.required],
+      genero: ['FICCAO_CIENTIFICA', Validators.required],
       autor: ['', Validators.required],
       editora: ['', Validators.required],
       publicacao: [''],
@@ -78,8 +78,10 @@ export class BooksRegisterPage implements OnInit {
   saveBook() {
     const {nome} = this.form.value;
     this.loading = true;
+    let formValue = this.form.value;
+    formValue.publicacao = formValue.publicacao.split('T')[0];
 
-    this.booksApiService.saveBook(this.form.value).pipe(finalize(() => this.loading = false)).subscribe(
+    this.booksApiService.saveBook(formValue).pipe(finalize(() => this.loading = false)).subscribe(
       () => {
 
         // Se tudo ocorrer conforme esperado, verifica se o Livro é editado ou Adicionado
