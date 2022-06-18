@@ -25,10 +25,10 @@ export class AuthorsRegisterPage implements OnInit {
 
   ngOnInit() {
     this.form = this.formBuilder.group({
-      id: [''],
+      id: [0],
       nome: ['', Validators.required],
       sobrenome: ['', Validators.required],
-      nacionalidade: ['Brasileiro(a)', Validators.required],
+      nacionalidade: ['BRASIL', Validators.required],
       redes: [''],
       nascimento: [''],
       retrato: [''],
@@ -63,8 +63,10 @@ export class AuthorsRegisterPage implements OnInit {
   saveAuthor() {
     const {nome, sobrenome} = this.form.value;
     this.loading = true;
+    let formValue = this.form.value;
+    formValue.nascimento = formValue.nascimento.split('T')[0];
 
-    this.authorsApiService.saveAuthor(this.form.value).pipe(finalize(() => this.loading = false)).subscribe(
+    this.authorsApiService.saveAuthor(formValue).pipe(finalize(() => this.loading = false)).subscribe(
       () => {
 
         // Se tudo ocorrer conforme esperado, verifica se o Autor é editado ou Adicionado
