@@ -6,25 +6,25 @@ import { Genero } from './books';
 })
 export class GeneroPipe implements PipeTransform {
 
-  transform(value: Genero): string {
+  transform(value: string): string {
     switch (value) {
-      case Genero.FANTASIA:
+      case 'FANTASIA':
         return 'Fantasia';
-      case Genero.FICCAO_CIENTIFICA:
+      case 'FICCAO_CIENTIFICA':
         return 'Ficção Científica';
-      case Genero.FICCAO_LITERARIA:
+      case 'FICCAO_LITERARIA':
         return 'Ficção Literária';
-      case Genero.HORROR:
+      case 'HORROR':
         return 'Horror';
-      case Genero.NAO_FICCAO:
+      case 'NAO_FICCAO':
         return 'Não Ficção';
-      case Genero.POESIA:
+      case 'POESIA':
         return 'Poesia';
-      case Genero.RELIGIOSO:
+      case 'RELIGIOSO':
         return 'Religioso';
-      case Genero.ROMANCE:
+      case 'ROMANCE':
         return 'Romance';
-      case Genero.SUSPENSE:
+      case 'SUSPENSE':
         return 'Suspense';
     }
   }
