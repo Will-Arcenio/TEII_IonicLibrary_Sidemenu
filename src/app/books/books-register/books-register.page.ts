@@ -90,8 +90,10 @@ export class BooksRegisterPage implements OnInit {
         }
         this.router.navigate(['books-list']);
       },
-      () => {
-        this.messageService.showErrorMessage(`Erro ao salvar o Livro '${nome}'.`, () => this.saveBook());
+      ({error}) => {
+        const erro = error?.erro ?? '';
+        const message = `Erro ao salvar o Livro. ${erro ? 'ERRO: '+erro : ''}`;
+        this.messageService.showErrorMessage(message, () => this.saveBook());
       }
     );
   }
