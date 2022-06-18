@@ -94,7 +94,7 @@ export class BooksRegisterPage implements OnInit {
       },
       ({error}) => {
         const erro = error?.erro ?? '';
-        const message = `Erro ao salvar o Livro. ${erro ? 'ERRO: '+erro : ''}`;
+        const message = `Erro ao salvar o Livro.<br> ${erro ? '<strong>ERRO:</strong> ' + erro : ''}`;
         this.messageService.showErrorMessage(message, () => this.saveBook());
       }
     );

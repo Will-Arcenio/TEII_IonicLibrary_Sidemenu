@@ -81,8 +81,10 @@ export class PublishersRegisterPage implements OnInit {
         }
         this.router.navigate(['publishers-list']);
       },
-      () => {
-        this.messageService.showErrorMessage(`Erro ao salvar a Editora '${nome}'.`, () => this.savePublisher());
+      ({error}) => {
+        const erro = error?.erro ?? '';
+        const message = `Erro ao salvar a Editora.<br> ${erro ? '<strong>ERRO:</strong> ' + erro : ''}`;
+        this.messageService.showErrorMessage(message, () => this.savePublisher());
       }
     );
   }

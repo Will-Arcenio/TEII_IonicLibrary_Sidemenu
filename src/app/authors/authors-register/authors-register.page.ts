@@ -79,7 +79,7 @@ export class AuthorsRegisterPage implements OnInit {
       },
       ({error}) => {
         const erro = error?.erro ?? '';
-        const message = `Erro ao salvar o Autor. ${erro ? 'ERRO: '+erro : ''}`;
+        const message = `Erro ao salvar o Autor.<br> ${erro ? '<strong>ERRO:</strong> ' + erro : ''}`;
         this.messageService.showErrorMessage(message, () => this.saveAuthor());
       }
     );
