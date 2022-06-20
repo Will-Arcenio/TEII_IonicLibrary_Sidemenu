@@ -26,7 +26,8 @@
 
         <ion-item *ngFor="let book of books">
           <ion-text>{{ book.nome }}</ion-text>
-          <ion-text slot="end"  color="success">{{ book.preco | currency }}</ion-text>
+          <ion-text slot="end"  color="success" *ngIf="book.preco === 0">GRÁTIS</ion-text>
+          <ion-text slot="end"  color="success" *ngIf="book.preco !== 0">{{ book.preco | currency }}</ion-text>
         </ion-item>
 
       </ion-list>
