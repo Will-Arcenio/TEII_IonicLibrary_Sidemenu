@@ -76,7 +76,23 @@
 
                     <ion-list slot="content">
                       <ion-item>
-                        <ion-text><strong>Autor: </strong>{{ book.autor }}</ion-text>
+
+                        <!-- Caso tenha mais de 1 autor -->
+                        <div *ngIf="book.autor?.length > 1">
+                          <strong>Autores: </strong>
+                          <ion-text *ngFor="let author of book.autor">
+                            <div>» {{ author.nome }} {{ author.sobrenome }}</div>
+                          </ion-text>
+                        </div>
+
+                        <!-- Caso tenha somente 1 autor -->
+                        <div *ngIf="book.autor?.length <= 1">
+                          <strong>Autor: </strong>
+                          <ion-text *ngFor="let author of book.autor">
+                            <div>» {{ author.nome }} {{ author.sobrenome }}</div>
+                          </ion-text>
+                        </div>
+
                       </ion-item>
 
                       <ion-item>
@@ -84,7 +100,7 @@
                       </ion-item>
 
                       <ion-item>
-                        <ion-text><strong>Editora: </strong>{{ book.editora }}</ion-text>
+                        <ion-text><strong>Editora: </strong>{{ book.editora.nome }}</ion-text>
                       </ion-item>
 
                       <ion-item lines="none">
